@@ -5,6 +5,7 @@ import pickle
 import os
 import matplotlib.pyplot as plt
 import argparse
+import zipfile import ZipFile
 """Script to preprocess the omniglot dataset and pickle it into an array that's easy
     to index my character type"""
 
@@ -26,8 +27,8 @@ def loadimgs(path,n=0):
     #if data not already unzipped, unzip it.
     if not os.path.exists(path):
         print("unzipping")
-        os.chdir(data_path)
-        os.system("unzip {}".format(path))
+	with ZipFile('path', 'r') as zipObj:
+		zipObj.extractall()
     X=[]
     y = []
     cat_dict = {}
