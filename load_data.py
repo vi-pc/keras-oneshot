@@ -58,6 +58,7 @@ def loadimgs(path,n=0):
                 print("error - category_images:", category_images)
             curr_y += 1
             lang_dict[alphabet][1] = curr_y - 1
+    print(len(y),len(X),y,X)
     y = np.vstack(y)
     X = np.stack(X)
     return X,y,lang_dict
