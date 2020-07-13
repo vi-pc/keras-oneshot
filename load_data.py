@@ -27,7 +27,7 @@ def loadimgs(path,n=0):
     #if data not already unzipped, unzip it.
     if not os.path.exists(path):
         print("unzipping")
-        os.chdir(path)
+        os.mkdir(path)
         with ZipFile(path+'.zip', 'r') as zipObj:
             zipObj.extractall()
     X=[]
