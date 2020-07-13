@@ -5,7 +5,7 @@ import pickle
 import os
 import matplotlib.pyplot as plt
 import argparse
-import zipfile import ZipFile
+from zipfile import ZipFile
 """Script to preprocess the omniglot dataset and pickle it into an array that's easy
     to index my character type"""
 
