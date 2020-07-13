@@ -27,7 +27,7 @@ def loadimgs(path,n=0):
     if not os.path.exists(path):
         print("unzipping")
         os.chdir(data_path)
-        os.system("unzip {}".format(path+".zip" ))
+        os.system("unzip {}".format(path))
     X=[]
     y = []
     cat_dict = {}
