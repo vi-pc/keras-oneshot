@@ -29,7 +29,7 @@ def loadimgs(path,n=0):
         print("unzipping")
         os.mkdir(path)
         with ZipFile(path+'.zip', 'r') as zipObj:
-            zipObj.extractall()
+            zipObj.extractall(path)
     X=[]
     y = []
     cat_dict = {}
