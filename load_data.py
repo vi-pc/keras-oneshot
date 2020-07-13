@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-from matplotlib.pyplot import imread
+from scipy.misc.pilutil import imread
 import pickle
 import os
 import matplotlib.pyplot as plt
