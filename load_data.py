@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-from scipy.misc.pilutil import imread
+import cv2 as cv
 import pickle
 import os
 import matplotlib.pyplot as plt
@@ -47,7 +47,7 @@ def loadimgs(path,n=0):
             letter_path = os.path.join(alphabet_path, letter)
             for filename in os.listdir(letter_path):
                 image_path = os.path.join(letter_path, filename)
-                image = imread(image_path)
+                image = cv.imread(image_path)
                 category_images.append(image)
                 y.append(curr_y)
             try:
