@@ -59,10 +59,8 @@ def loadimgs(path,n=0):
             curr_y += 1
             lang_dict[alphabet][1] = curr_y - 1
     print('y',len(y),'x',len(X))
-    for t in y:
-        print(len(t))
-    for t in x:
-        print(len(t))
+    print(y,'sdfsdfdsf')
+    print(x)
     #y = np.vstack(y)
     #X = np.stack(X)
     return X,y,lang_dict
