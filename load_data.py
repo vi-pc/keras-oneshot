@@ -28,7 +28,7 @@ def loadimgs(path,n=0):
     if not os.path.exists(path):
         print("unzipping")
         with ZipFile(path+'.zip', 'r') as zipObj:
-            zipObj.extractall(path)
+            zipObj.extractall()
     X=[]
     y = []
     cat_dict = {}
