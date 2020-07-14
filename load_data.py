@@ -50,7 +50,6 @@ def loadimgs(path,n=0):
                 category_images.append(image)
                 y.append(curr_y)
             try:
-                print('cat',category_images)
                 X.append(np.stack(category_images))
             #edge case  - last one
             except ValueError as e:
@@ -59,10 +58,8 @@ def loadimgs(path,n=0):
             curr_y += 1
             lang_dict[alphabet][1] = curr_y - 1
     print('y',len(y),'x',len(X))
-    print(y,'sdfsdfdsf')
-    print(X)
-    #y = np.vstack(y)
-    #X = np.stack(X)
+    y = np.vstack(y)
+    X = np.stack(X)
     return X,y,lang_dict
 
 X,y,c=loadimgs(train_folder)
